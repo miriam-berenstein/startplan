@@ -1,0 +1,1 @@
+import { PageHeader } from '../../shared/ui/PageHeader'; import { Card } from '../../shared/ui/Card'; export function RiskScreen(){return <><PageHeader title='סיכון ותרחישים' description='Foundation hook לתרחישים, Stress ומונטה קרלו.'/><Card>תרחישי בסיס מוכנים לחיבור מלא.</Card></>}

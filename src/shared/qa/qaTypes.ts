@@ -1,0 +1,1 @@
+export type QACheck = { id:string; title:string; category:'layout'|'performance'|'buttons'|'state'|'engine'|'risk'|'tax'|'reports'|'export'; mode:'unit'|'integration'|'e2e'|'visual'|'manual'; required:boolean; relatedScreenIds:string[]; relatedEngineIds:string[]; passCondition:string };

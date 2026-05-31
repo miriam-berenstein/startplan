@@ -1,0 +1,2 @@
+import { z } from 'zod';
+export const rulesSchema = z.object({ managementFeeAnnual: z.number().min(0).max(0.05), defaultAnnualReturn: z.number().min(-0.5).max(0.5), taxEnabledDefault: z.boolean(), capitalGainTaxRate: z.number().min(0).max(0.5), maxLtv: z.number().min(0).max(0.9), leverageIntervalMonths: z.number().min(1), maxOneTimeDepositRecommendation: z.number().min(0), maxMonthlyDepositRecommendation: z.number().min(0), recommendationIncreaseMonthsLimit: z.number().min(1), reverseDepositMonthsBuffer: z.number().min(0), stopDepositsAtRetirement: z.boolean() });

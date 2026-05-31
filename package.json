@@ -1,0 +1,32 @@
+{
+  "name": "stratplan-master-pro",
+  "version": "0.1.0-foundation",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "test": "vitest run",
+    "qa:static": "node scripts/static-qa.mjs"
+  },
+  "dependencies": {
+    "@tanstack/react-table": "latest",
+    "@tanstack/react-virtual": "latest",
+    "@vitejs/plugin-react": "latest",
+    "lucide-react": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "typescript": "latest",
+    "vite": "latest",
+    "zod": "latest",
+    "zustand": "latest"
+  },
+  "devDependencies": {
+    "@playwright/test": "latest",
+    "@testing-library/react": "latest",
+    "@types/react": "^19.2.15",
+    "@types/react-dom": "^19.2.3",
+    "jsdom": "latest",
+    "vitest": "latest"
+  }
+}

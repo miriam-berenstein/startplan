@@ -1,0 +1,3 @@
+import { PageHeader } from '../../shared/ui/PageHeader';
+import { Card } from '../../shared/ui/Card';
+export function InstructionsScreen(){return <><PageHeader title='הוראות מערכת' description='עקרונות עבודה מחייבים למערכת: בלי טלאים, בלי ערכים קשיחים, ובלי Release לפני QA.'/><div className='grid cards-2'><Card><h3>כללי זהב</h3><ul className='clean-list'><li>שינוי מסלול לא מוחק לקוח.</li><li>כל כלל ניתן לעריכה ונשמר ב־Audit.</li><li>כל מנוע מחזיר הסבר, אזהרות ו־QA flags.</li><li>אין ZIP אם יש blocker קריטי.</li></ul></Card><Card><h3>סדר עבודה</h3><p>שאלון → אירועים → מסלולים → סימולציה → מודל הפוך/המלצות → השוואות → Export → QA.</p></Card></div></>}

@@ -1,0 +1,5 @@
+import { PageHeader } from '../../shared/ui/PageHeader';
+import { Card } from '../../shared/ui/Card';
+import { useMasterProStore } from '../../app/store/useMasterProStore';
+import { formatPercent } from '../../shared/utils/money';
+export function LeverageScreen(){ const route=useMasterProStore(s=>s.routes[s.selectedRouteId]); const rules=useMasterProStore(s=>s.rules); const snapshot=useMasterProStore(s=>s.simulationSnapshots[s.selectedRouteId]); return <><PageHeader title='מינוף / הלוואות' description='בדיקת מינוף לפי LTV, יכולת שירות חוב והשפעה על סיכון.'/><div className='grid cards-3'><Card><h3>סטטוס מסלול</h3><b>{route.leverageEnabled?'מינוף פעיל':'ללא מינוף'}</b><p>{route.leverageEnabled?'המנוע יבדוק אפשרות מינוף לפי כללים.':'ניתן לבנות מסלול נפרד ממונף להשוואה.'}</p></Card><Card><h3>מגבלת LTV</h3><b>{formatPercent(rules.maxLtv)}</b></Card><Card><h3>הלוואות בסימולציה</h3><b>{snapshot?snapshot.totals.loans.toLocaleString('he-IL')+' ₪':'טרם הורץ'}</b></Card></div><Card><h3>Explainability</h3><p>הסבר “למה כן/לא בוצע מינוף” יוצג בכפתור פירוט בתוך שורת הסימולציה, לא כפתיחת שורות שמעמיסה על הטבלה.</p></Card></> }

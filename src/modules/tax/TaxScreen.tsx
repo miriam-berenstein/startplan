@@ -1,0 +1,1 @@
+import { PageHeader } from '../../shared/ui/PageHeader'; import { Card } from '../../shared/ui/Card'; export function TaxScreen(){return <><PageHeader title='מס' description='הפרדת קרן/רווח וחישוב מס על אירועי משיכה.'/><Card>אירועי מס מוצגים בפירוט הפעולה בסימולציה, ללא עמודת עומס נפרדת.</Card></>}

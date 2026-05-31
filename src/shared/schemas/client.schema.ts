@@ -1,0 +1,2 @@
+import { z } from 'zod';
+export const clientSchema = z.object({ id: z.string(), fatherAge: z.number().min(18).max(80), motherAge: z.number().min(18).max(80).optional(), retirementAge: z.number().min(50).max(80), numberOfChildren: z.number().min(1).max(20), firstEventInMonths: z.number().min(0), monthsBetweenEvents: z.number().min(1), initialCapital: z.number().min(0), baseMonthlyDeposit: z.number().min(0), defaultEventTarget: z.number().min(0) });

@@ -1,0 +1,4 @@
+import { PageHeader } from '../../shared/ui/PageHeader';
+import { Card } from '../../shared/ui/Card';
+import { useMasterProStore } from '../../app/store/useMasterProStore';
+export function TaxQuestionnaireScreen(){ const rules=useMasterProStore(s=>s.rules); const update=useMasterProStore(s=>s.actions.updateRule); return <><PageHeader title='שאלון מס' description='הגדרות מס בסיסיות שמוזנות למנוע המס.'/><Card><label className='rule-row'><span><b>הפעל חישוב מס</b><small>ניתן להציג אירועי מס דרך פירוט פעולת משיכה.</small></span><input type='checkbox' checked={rules.taxEnabledDefault} onChange={e=>update('taxEnabledDefault',e.target.checked)}/></label><label className='big-input'>שיעור מס רווח הון<input type='number' step='0.01' value={rules.capitalGainTaxRate} onChange={e=>update('capitalGainTaxRate',Number(e.target.value))}/></label></Card></>}
